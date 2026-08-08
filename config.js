@@ -9,4 +9,4 @@
    quebra o site.
    --------------------------------------------------------------- */
 
-window.CASAMENTO_API = "https://script.google.com/macros/s/AKfycby7_2WFxdNdpKf27eZNcIJiHubwZp6oVymNVHxcmlAeLvwrAIL5mkH2Am-Jz_9TopPh/exec";
+window.CASAMENTO_API = "https://script.google.com/macros/s/AKfycbyxShfDd5z_QSHP9hNOvfTG_gOys3INzh5OZEunx5GOFbc5dDHAoY2gHeSJZAHnTPnp/exec";
