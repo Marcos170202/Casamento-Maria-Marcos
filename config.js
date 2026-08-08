@@ -1,10 +1,12 @@
 /* ---------------------------------------------------------------
    Endereço da planilha que guarda as confirmações.
 
-   Já está preenchido. Só edite se um dia você criar uma
-   implantação NOVA no Apps Script (aí o endereço muda).
+   Já está preenchido. Só precisa mexer aqui se você criar uma
+   implantação NOVA no Apps Script — aí o endereço muda.
+   Para apenas atualizar o código sem trocar o endereço, use
+   Implantar → Gerenciar implantações → lápis → Nova versão.
 
-   Se precisar mexer, use o Bloco de Notas ou o VS Code.
+   Se precisar editar, use o Bloco de Notas ou o VS Code.
    Nunca o Word: ele troca as aspas retas por aspas curvas e
    quebra o site.
    --------------------------------------------------------------- */
