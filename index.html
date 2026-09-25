@@ -274,12 +274,15 @@ select{
 .fila-tel{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:6px}
 .fila-acoes{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:16px}
 .fila-acoes .btn-primary{flex:1;min-width:260px}
-.ct-row{grid-template-columns:1.1fr 168px 170px auto;align-items:center}
+.ct-row{grid-template-columns:1.05fr 348px auto;align-items:center}
+.ct-campos{display:flex;flex-direction:column;gap:6px}
+.ct-linha{display:grid;grid-template-columns:168px 1fr;gap:6px}
+.ct-mail{font-size:13px;padding:8px 12px;border-radius:9px}
 .ct-pais{font-size:12.5px;padding:9px 30px 9px 10px;border-radius:9px;background-position:right 10px center}
 .ct-tel{font-size:14px;padding:9px 12px;border-radius:9px}
 .pills button[disabled]{opacity:.45;cursor:not-allowed}
 .pills button[disabled]:hover{border-color:var(--line)}
-@media(max-width:980px){ .ct-row{grid-template-columns:1fr} .ct-pais{width:100%} }
+@media(max-width:980px){ .ct-row{grid-template-columns:1fr} .ct-pais{width:100%} .ct-linha{grid-template-columns:1fr} }
 .cv-abrindo{text-align:center;padding:70px 0 40px;animation:fadeIn .4s ease both}
 .cv-abrindo img{width:min(260px,62vw);display:block;margin:0 auto;opacity:.85}
 .cv-abrindo span{display:block;margin-top:18px;font-size:10.5px;letter-spacing:.22em;
@@ -723,7 +726,7 @@ const LOGO = "data:image/webp;base64,UklGRhBdAwBXRUJQVlA4WAoAAAAQAAAA5wMASAMAQUx
 const SEED = [{"id":"c001","nome":"Luciano Miranda","titulo":"","dependentes":"Elaine Miranda, Mariane Miranda","lado":"Noiva","grupo":"Família","num":1,"status":"pendente","pessoas":3,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"luciano miranda"},{"id":"c002","nome":"Luiz Eugênio de Miranda","titulo":"","dependentes":"Vera Miranda","lado":"Noiva","grupo":"Família","num":2,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"luiz eugenio de miranda"},{"id":"c003","nome":"Fabiano Miranda","titulo":"","dependentes":"Lidiane Miranda, Luiz Ricardo Miranda, Samuel Miranda","lado":"Noiva","grupo":"Família","num":3,"status":"pendente","pessoas":4,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"fabiano miranda"},{"id":"c004","nome":"Dona Eva","titulo":"","dependentes":"Alcides","lado":"Noiva","grupo":"Família","num":4,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"dona eva"},{"id":"c005","nome":"Tatiane Miranda","titulo":"","dependentes":"Luiz Eugênio","lado":"Noiva","grupo":"Família","num":5,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"tatiane miranda"},{"id":"c006","nome":"Eudes Lemes","titulo":"","dependentes":"","lado":"Noiva","grupo":"Família","num":6,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"eudes lemes"},{"id":"c007","nome":"Edésio Nunes","titulo":"","dependentes":"","lado":"Noiva","grupo":"Família","num":7,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"edesio nunes"},{"id":"c008","nome":"Daniela Oliveira","titulo":"","dependentes":"Wal, Ana Paula Oliveira","lado":"Noiva","grupo":"Família","num":8,"status":"pendente","pessoas":3,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"daniela oliveira"},{"id":"c009","nome":"Douglas Oliveira","titulo":"","dependentes":"","lado":"Noiva","grupo":"Família","num":9,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"douglas oliveira"},{"id":"c010","nome":"Marcelo Oliveira","titulo":"","dependentes":"Viviane França, Miguel, Murilo","lado":"Noiva","grupo":"Família","num":10,"status":"pendente","pessoas":4,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"marcelo oliveira"},{"id":"c011","nome":"Luzia Xavier","titulo":"","dependentes":"","lado":"Noiva","grupo":"Família","num":11,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"luzia xavier"},{"id":"c012","nome":"Stephannie Oliveira","titulo":"","dependentes":"","lado":"Noiva","grupo":"Família","num":12,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"stephannie oliveira"},{"id":"c013","nome":"Roberto","titulo":"","dependentes":"Elizandra, Iara, Arthur, Augusto, Arlete","lado":"Noiva","grupo":"Família","num":13,"status":"pendente","pessoas":6,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"roberto"},{"id":"c014","nome":"Isaac","titulo":"","dependentes":"Dora","lado":"Noiva","grupo":"Família","num":14,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"isaac"},{"id":"c015","nome":"Luciana","titulo":"","dependentes":"Luiz","lado":"Noiva","grupo":"Família","num":15,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"luciana"},{"id":"c016","nome":"Flores","titulo":"","dependentes":"Diocleciano","lado":"Noiva","grupo":"Família","num":16,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"flores"},{"id":"c017","nome":"Laura","titulo":"","dependentes":"Bonny, Luiza, Liz","lado":"Noiva","grupo":"Família","num":17,"status":"pendente","pessoas":4,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"laura"},{"id":"c018","nome":"Camilia","titulo":"","dependentes":"Thiago, Filha de Camila, Filho de Camila","lado":"Noiva","grupo":"Família","num":18,"status":"pendente","pessoas":4,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"camilia"},{"id":"c019","nome":"Adriano","titulo":"","dependentes":"Débora, Pedro, Lívia","lado":"Noiva","grupo":"Família","num":19,"status":"pendente","pessoas":4,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"adriano"},{"id":"c020","nome":"Pedro Oliveira","titulo":"","dependentes":"","lado":"Noiva","grupo":"Família","num":20,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"pedro oliveira"},{"id":"c021","nome":"Nice Lemes","titulo":"","dependentes":"","lado":"Noiva","grupo":"Família","num":21,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"nice lemes"},{"id":"c022","nome":"Nataly","titulo":"","dependentes":"Idros, Filha Nataly","lado":"Noiva","grupo":"Família","num":22,"status":"pendente","pessoas":3,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"nataly"},{"id":"c023","nome":"Nice Miranda","titulo":"","dependentes":"Rony","lado":"Noiva","grupo":"Família","num":23,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"nice miranda"},{"id":"c024","nome":"Valdete","titulo":"","dependentes":"","lado":"Noiva","grupo":"Família","num":24,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"valdete"},{"id":"c025","nome":"Mariluce","titulo":"","dependentes":"Elza","lado":"Noiva","grupo":"Família","num":25,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"mariluce"},{"id":"c026","nome":"Guilherme","titulo":"","dependentes":"","lado":"Noiva","grupo":"Amigos","num":26,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"guilherme"},{"id":"c027","nome":"Isabele","titulo":"","dependentes":"","lado":"Noiva","grupo":"Amigos","num":27,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"isabele"},{"id":"c028","nome":"Karolina","titulo":"","dependentes":"Kelly","lado":"Noiva","grupo":"Amigos","num":28,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"karolina"},{"id":"c029","nome":"Fernanda","titulo":"","dependentes":"Nathan","lado":"Noiva","grupo":"Amigos","num":29,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"fernanda"},{"id":"c030","nome":"Raquel","titulo":"","dependentes":"Junior","lado":"Noiva","grupo":"Amigos","num":30,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"raquel"},{"id":"c031","nome":"Vinicius","titulo":"","dependentes":"","lado":"Noiva","grupo":"Amigos","num":31,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"vinicius"},{"id":"c032","nome":"Guilherme Caldana","titulo":"","dependentes":"","lado":"Noiva","grupo":"Amigos","num":32,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"guilherme caldana"},{"id":"c033","nome":"Jainy","titulo":"","dependentes":"","lado":"Noiva","grupo":"Amigos","num":33,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"jainy"},{"id":"c034","nome":"Maria Julia","titulo":"","dependentes":"","lado":"Noiva","grupo":"Amigos","num":34,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"maria julia"},{"id":"c035","nome":"Guilherme","titulo":"","dependentes":"Maria Clara","lado":"Noiva","grupo":"Amigos","num":35,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"guilherme"},{"id":"c036","nome":"Ana Clara","titulo":"","dependentes":"Lucas","lado":"Noiva","grupo":"Amigos","num":36,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"ana clara"},{"id":"c037","nome":"Eliana","titulo":"","dependentes":"Edilson","lado":"Noiva","grupo":"Amigos","num":37,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"eliana"},{"id":"c038","nome":"Mariangela","titulo":"","dependentes":"José Roberto","lado":"Noiva","grupo":"Amigos","num":38,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"mariangela"},{"id":"c039","nome":"Carlos Roberto da Veiga","titulo":"","dependentes":"","lado":"Noivo","grupo":"Família","num":39,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"carlos roberto da veiga"},{"id":"c040","nome":"Neuma Dias","titulo":"","dependentes":"Maria Vitória de Souza","lado":"Noivo","grupo":"Família","num":40,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"neuma dias"},{"id":"c041","nome":"Ana Luiza de Souza","titulo":"","dependentes":"Bruno","lado":"Noivo","grupo":"Família","num":41,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"ana luiza de souza"},{"id":"c042","nome":"André","titulo":"","dependentes":"Tatiele","lado":"Noivo","grupo":"Família","num":42,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"andre"},{"id":"c043","nome":"Edilson","titulo":"","dependentes":"Marly, Lucas","lado":"Noivo","grupo":"Família","num":43,"status":"pendente","pessoas":3,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"edilson"},{"id":"c044","nome":"Daniela","titulo":"","dependentes":"Eduardo","lado":"Noivo","grupo":"Família","num":44,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"daniela"},{"id":"c045","nome":"Bruna","titulo":"","dependentes":"Kaique","lado":"Noivo","grupo":"Família","num":45,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"bruna"},{"id":"c046","nome":"Luiz","titulo":"","dependentes":"Irene","lado":"Noivo","grupo":"Família","num":46,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"luiz"},{"id":"c047","nome":"Eduarda","titulo":"","dependentes":"","lado":"Noivo","grupo":"Família","num":47,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"eduarda"},{"id":"c048","nome":"Luiz Gustavo","titulo":"","dependentes":"Lara Stucki","lado":"Noivo","grupo":"Família","num":48,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"luiz gustavo"},{"id":"c049","nome":"Edileuza","titulo":"","dependentes":"João, João Gabriel","lado":"Noivo","grupo":"Família","num":49,"status":"pendente","pessoas":3,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"edileuza"},{"id":"c050","nome":"Lorraine","titulo":"","dependentes":"Lukas, Cecília, Marina","lado":"Noivo","grupo":"Família","num":50,"status":"pendente","pessoas":4,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"lorraine"},{"id":"c051","nome":"Neta","titulo":"","dependentes":"Mauro, Júnior, Bruno, Tairine","lado":"Noivo","grupo":"Família","num":51,"status":"pendente","pessoas":5,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"neta"},{"id":"c052","nome":"Paulo Vitor","titulo":"","dependentes":"Nayara","lado":"Noivo","grupo":"Família","num":52,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"paulo vitor"},{"id":"c053","nome":"Rafael","titulo":"","dependentes":"Dayane","lado":"Noivo","grupo":"Amigos","num":53,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"rafael"},{"id":"c054","nome":"Leonardo","titulo":"","dependentes":"Maria Eduarda","lado":"Noivo","grupo":"Amigos","num":54,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"leonardo"},{"id":"c055","nome":"Felipe","titulo":"","dependentes":"Laura","lado":"Noivo","grupo":"Amigos","num":55,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"felipe"},{"id":"c056","nome":"Ivyny","titulo":"","dependentes":"Vynicio","lado":"Noivo","grupo":"Amigos","num":56,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"ivyny"},{"id":"c057","nome":"Matusalem","titulo":"","dependentes":"Alana","lado":"Noivo","grupo":"Amigos","num":57,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"matusalem"},{"id":"c058","nome":"Antonio","titulo":"","dependentes":"","lado":"Noivo","grupo":"Amigos","num":58,"status":"pendente","pessoas":1,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"antonio"},{"id":"c059","nome":"Pedro","titulo":"","dependentes":"Carla","lado":"Noivo","grupo":"Amigos","num":59,"status":"pendente","pessoas":2,"criancas":0,"telefone":"","restricao":"","mensagem":"","obs":"","convite":false,"enviado":false,"novo":false,"em":"","k":"pedro"}];
 const KEY = "casamento-mm-v1";
 const LISTA_VERSAO = '5';
-const BUILD = '2026-09-25a';   // aparece no rodapé do painel, para conferir qual arquivo está no ar   // PDF de agosto, agrupado pela tag verde (representante + dependentes)
+const BUILD = '2026-09-25c';   // aparece no rodapé do painel, para conferir qual arquivo está no ar   // PDF de agosto, agrupado pela tag verde (representante + dependentes)
 
 document.getElementById('watermark').style.backgroundImage = `url(${LOGO})`;
 
@@ -1555,8 +1558,9 @@ function rowHTML(g){
     ${open?`<div class="detail">
       <div class="grid">
         <div><label>Representante</label><input type="text" data-f="nome" data-id="${g.id}" value="${esc(g.nome)}"></div>
-        <div><label>País do número</label>${selectPais(g.id, g.telefone)}</div>
-        <div><label>Telefone</label><input type="text" data-f="telefone" data-id="${g.id}" value="${esc(g.telefone)}"></div>
+        <div><label>País do número</label>${selectPais(g.id, soTelefone(g.telefone))}</div>
+        <div><label>Telefone</label><input type="text" data-f="telefone" data-id="${g.id}" value="${esc(soTelefone(g.telefone))}"></div>
+        <div class="full"><label>E-mail</label><input type="email" data-f="email" data-id="${g.id}" value="${esc(soEmail(g.telefone))}" autocomplete="off" spellcheck="false" placeholder="para quem só tem contato por e-mail"></div>
         <div><label>Pessoas</label><input type="text" inputmode="numeric" data-f="pessoas" data-id="${g.id}" value="${g.pessoas}"></div>
         <div><label>Crianças</label><input type="text" inputmode="numeric" data-f="criancas" data-id="${g.id}" value="${g.criancas}"></div>
         <div class="full"><label>Dependentes (${depsDe(g).length})</label>
@@ -1767,10 +1771,44 @@ function tratamentoPadrao(g){
 function tituloDe(g){
   return (g.titulo||'').trim() || tratamentoPadrao(g);
 }
+/* ---------------------------------------------------------------------
+   Contato: telefone e/ou e-mail, guardados na mesma coluna.
+
+   O e-mail é reconhecido pelo "@", então os dois convivem no mesmo campo:
+      (65) 99999-8888
+      (65) 99999-8888 · contato@empresa.com
+      contato@empresa.com
+   Quem só tem e-mail não precisa de telefone, e vice-versa. Como nenhum
+   contato antigo tem "@", tudo que já está gravado continua sendo telefone.
+   --------------------------------------------------------------------- */
+const RE_EMAIL = /[^\s,;|·<>]+@[^\s,;|·<>]+\.[A-Za-z]{2,}/;
+function soEmail(v){ const m = String(v||'').match(RE_EMAIL); return m ? m[0] : ''; }
+function soTelefone(v){
+  return String(v||'').replace(new RegExp(RE_EMAIL.source,'g'),'')
+                      .replace(/[·|,;]/g,' ').replace(/\s+/g,' ').trim();
+}
+function juntarContato(tel, email){
+  return [String(tel||'').trim(), String(email||'').trim()].filter(Boolean).join(' · ');
+}
+function emailOk(g){ return !!soEmail(g && g.telefone); }
+function contatoOk(g){ return telOk(g) || emailOk(g); }
+
+function assuntoConvite(){
+  const c = DB.config;
+  return `Convite de casamento — ${c.noiva} e ${c.noivo}`;
+}
+function mailtoLink(g){
+  const e = soEmail(g && g.telefone);
+  if(!e) return '';
+  return 'mailto:' + encodeURIComponent(e)
+       + '?subject=' + encodeURIComponent(assuntoConvite())
+       + '&body='    + encodeURIComponent(mensagemConvite(g));
+}
+
 function digitos(v){ return String(v||'').replace(/\D/g,''); }
 // Número completo para o WhatsApp, já com o código do país na frente.
 function waDigitos(g){
-  const t = String((g&&g.telefone)||''), i = t.indexOf('+');
+  const t = soTelefone((g&&g.telefone)||''), i = t.indexOf('+');
   if(i >= 0) return t.slice(i).replace(/\D/g,'');   // de fora: o código já está ali
   const d = digitos(t);
   if(!d) return '';
@@ -1788,13 +1826,25 @@ async function setDeps(g, arr){
   await persist({action:'patch', id:g.id, field:'dependentes', value:g.dependentes});
   await persist({action:'patch', id:g.id, field:'pessoas', value:g.pessoas});
 }
-async function enviarWhats(g){
-  const url = waLink(g);
-  if(!url){ toast('Cadastre o telefone na aba Contatos.'); return; }
+// Abre o convite no canal que o contato permitir. "canal" força um dos dois;
+// sem ele, o WhatsApp tem preferência e o e-mail entra quando não há telefone.
+async function enviarConvite(g, canal){
+  const via = canal || (telOk(g) ? 'whats' : 'email');
+  const url = via === 'email' ? mailtoLink(g) : waLink(g);
+  if(!url){
+    toast(via === 'email' ? 'Cadastre o e-mail na aba Contatos.' : 'Cadastre o telefone na aba Contatos.');
+    return;
+  }
   if(!linkConvite(g)) toast('Sem o endereço do site, a mensagem vai sem o link.');
+
   let abriu = null;
   try{ abriu = window.open(url, '_blank'); }catch(e){}
-  if(!abriu){ textPanel = { title:'Abra este endereço para enviar pelo WhatsApp', text:url }; }
+  if(!abriu){
+    textPanel = via === 'email'
+      ? { title:'Não consegui abrir seu programa de e-mail. Copie a mensagem e envie para ' + soEmail(g.telefone),
+          text: assuntoConvite() + '\n\n' + mensagemConvite(g) }
+      : { title:'Abra este endereço para enviar pelo WhatsApp', text:url };
+  }
   if(!g.enviado){ g.enviado = true; await persist({action:'patch', id:g.id, field:'enviado', value:true}); }
   render();
 }
@@ -1833,11 +1883,11 @@ function quebrar(texto, max){
 }
 
 function proximoEnvio(){
-  return DB.guests.find(g => !g.enviado && !pulados.has(g.id) && telOk(g));
+  return DB.guests.find(g => !g.enviado && !pulados.has(g.id) && contatoOk(g));
 }
 
 function filaHTML(){
-  const comTel = DB.guests.filter(g => telOk(g));
+  const comTel = DB.guests.filter(g => contatoOk(g));
   const feitos = comTel.filter(g => g.enviado).length;
   const semTel = DB.guests.length - comTel.length;
   const g = proximoEnvio();
@@ -1846,28 +1896,29 @@ function filaHTML(){
   return `<div class="card fila">
     <div class="fila-topo">
       <span class="eyebrow">Envio em série</span>
-      <span class="fila-conta">${numero(feitos)} de ${numero(comTel.length)}${semTel?` · ${numero(semTel)} ainda sem telefone`:''}</span>
+      <span class="fila-conta">${numero(feitos)} de ${numero(comTel.length)}${semTel?` · ${numero(semTel)} ainda sem contato`:''}</span>
     </div>
     <div class="bar"><i style="width:${pct.toFixed(1)}%;background:var(--sim)"></i></div>
 
     ${g ? `<div class="fila-alvo">
       <h3>${esc(tituloDe(g))}</h3>
-      <div class="fila-tel">${esc(g.telefone)} · ${esc(GROUP_LABEL(g))}</div>
+      <div class="fila-tel">${esc(telOk(g) ? soTelefone(g.telefone) : soEmail(g.telefone))} · ${esc(GROUP_LABEL(g))}</div>
       <div class="previa" style="max-height:150px;margin-top:12px">${esc(mensagemConvite(g))}</div>
     </div>
     <div class="fila-acoes">
-      <button class="btn btn-primary" data-act="fila-enviar" data-id="${g.id}">Abrir o WhatsApp e marcar como enviado</button>
+      <button class="btn btn-primary" data-act="fila-enviar" data-id="${g.id}" data-canal="${telOk(g)?'whats':'email'}">${
+        telOk(g) ? 'Abrir o WhatsApp e marcar como enviado' : 'Abrir o e-mail e marcar como enviado'}</button>
       <button class="btn" data-act="fila-pular" data-id="${g.id}">Pular por enquanto</button>
       <button class="btn btn-ghost" id="fila-fechar">Encerrar</button>
     </div>
     <span class="hint" style="display:block;text-align:center;margin-top:10px">
-      Aperte enviar lá no WhatsApp e volte para esta aba: o próximo já estará aqui.
+      Aperte enviar ${telOk(g)?'lá no WhatsApp':'no seu programa de e-mail'} e volte para esta aba: o próximo já estará aqui.
       ${pulados.size?`<br>${pulados.size} pulado${pulados.size>1?'s':''} nesta rodada.`:''}</span>`
     : `<div class="fila-alvo" style="text-align:center;padding:18px 0">
         <h3>${pulados.size ? 'Acabaram os da fila' : 'Todos os convites foram enviados'}</h3>
         <p class="sec-sub" style="margin-top:8px">${
           pulados.size ? `Restam ${pulados.size} que você pulou.` :
-          (semTel ? `Faltam ${semTel} famílias sem telefone cadastrado.` : 'Nada pendente por aqui.')}</p>
+          (semTel ? `Faltam ${semTel} famílias sem telefone nem e-mail cadastrado.` : 'Nada pendente por aqui.')}</p>
       </div>
       <div class="fila-acoes">
         ${pulados.size?`<button class="btn btn-primary" id="fila-repescar">Rever os pulados</button>`:''}
@@ -1879,21 +1930,27 @@ function filaHTML(){
 function contatosHTML(){
   const todos = DB.guests;
   const comTel = todos.filter(g=>telOk(g)).length;
+  const comMail = todos.filter(g=>emailOk(g)).length;
+  const semNada = todos.filter(g=>!contatoOk(g)).length;
   const enviados = todos.filter(g=>g.enviado).length;
   let lista = filtered();
-  if(filters.contato==='sem') lista = lista.filter(g=>!telOk(g));
-  if(filters.contato==='com') lista = lista.filter(g=>telOk(g));
+  if(filters.contato==='sem') lista = lista.filter(g=>!contatoOk(g));
+  if(filters.contato==='com') lista = lista.filter(g=>contatoOk(g));
+  if(filters.contato==='email') lista = lista.filter(g=>emailOk(g));
+  if(filters.contato==='soemail') lista = lista.filter(g=>emailOk(g) && !telOk(g));
   if(filters.contato==='enviado') lista = lista.filter(g=>g.enviado);
   if(filters.contato==='naoenviado') lista = lista.filter(g=>!g.enviado);
 
   return `<div class="panel-sec">
     <h2>Contatos dos representantes</h2>
-    <p class="sec-sub">Um telefone por família. Com o número salvo, o botão do WhatsApp abre a conversa
-      com a mensagem e o link do convite já prontos — é só apertar enviar.</p>
+    <p class="sec-sub">Um contato por família: telefone, e-mail ou os dois. Com o telefone, o botão abre
+      o WhatsApp; só com e-mail, abre seu programa de e-mail — em ambos os casos com a mensagem e o
+      link do convite já prontos, é só apertar enviar.</p>
 
-    <div class="stats" style="grid-template-columns:repeat(3,1fr)">
+    <div class="stats" style="grid-template-columns:repeat(4,1fr)">
       <div class="stat"><b>${numero(comTel)}</b><span>Com telefone</span></div>
-      <div class="stat"><b>${numero(todos.length - comTel)}</b><span>Sem telefone</span></div>
+      <div class="stat"><b>${numero(comMail)}</b><span>Com e-mail</span></div>
+      <div class="stat"><b>${numero(semNada)}</b><span>Sem contato</span></div>
       <div class="stat sim"><b>${numero(enviados)}</b><span>Convites enviados</span></div>
     </div>
 
@@ -1910,8 +1967,10 @@ function contatosHTML(){
       </select>
       <select id="fl-contato">
         <option value="todos">Todos</option>
-        <option value="sem" ${filters.contato==='sem'?'selected':''}>Sem telefone</option>
-        <option value="com" ${filters.contato==='com'?'selected':''}>Com telefone</option>
+        <option value="sem" ${filters.contato==='sem'?'selected':''}>Sem contato nenhum</option>
+        <option value="email" ${filters.contato==='email'?'selected':''}>Com e-mail</option>
+        <option value="soemail" ${filters.contato==='soemail'?'selected':''}>Só e-mail</option>
+        <option value="com" ${filters.contato==='com'?'selected':''}>Com algum contato</option>
         <option value="naoenviado" ${filters.contato==='naoenviado'?'selected':''}>Convite não enviado</option>
         <option value="enviado" ${filters.contato==='enviado'?'selected':''}>Convite enviado</option>
       </select>
@@ -1921,14 +1980,25 @@ function contatosHTML(){
 
     <div class="rows">${lista.map(g=>{
       const tem = telOk(g);
+      const mail = emailOk(g);
+      const tel = soTelefone(g.telefone);
       const n = depsDe(g).length;
       return `<div class="row ct-row ${g.enviado?'is-sim':''}">
         <div class="nm">${esc(g.nome)}<small>${esc(GROUP_LABEL(g))} · ${g.pessoas} ${g.pessoas===1?'pessoa':'pessoas'}${n?` · ${n} dependente${n===1?'':'s'}`:''}</small></div>
-        ${selectPais(g.id, g.telefone, 'ct-pais')}
-        <input type="text" class="ct-tel" data-f="telefone" data-id="${g.id}" value="${esc(g.telefone)}"
-               inputmode="tel" placeholder="${paisDe(g.telefone).c==='55'?'(65) 90000-0000':'só os números'}">
+        <div class="ct-campos">
+          <div class="ct-linha">
+            ${selectPais(g.id, tel, 'ct-pais')}
+            <input type="text" class="ct-tel" data-f="telefone" data-id="${g.id}" value="${esc(tel)}"
+                   inputmode="tel" placeholder="${paisDe(tel).c==='55'?'(65) 90000-0000':'só os números'}">
+          </div>
+          <input type="email" class="ct-mail" data-f="email" data-id="${g.id}" value="${esc(soEmail(g.telefone))}"
+                 inputmode="email" autocomplete="off" spellcheck="false" placeholder="e-mail (opcional)">
+        </div>
         <div class="pills">
-          <button data-act="cv-enviar" data-id="${g.id}" ${tem?'':'disabled'} title="${tem?'Abrir o WhatsApp com a mensagem pronta':'Cadastre o telefone primeiro'}">WhatsApp</button>
+          <button data-act="cv-enviar" data-id="${g.id}" data-canal="whats" ${tem?'':'disabled'}
+                  title="${tem?'Abrir o WhatsApp com a mensagem pronta':'Cadastre o telefone primeiro'}">WhatsApp</button>
+          <button data-act="cv-enviar" data-id="${g.id}" data-canal="email" ${mail?'':'disabled'}
+                  title="${mail?'Abrir seu programa de e-mail com a mensagem pronta':'Cadastre o e-mail primeiro'}">E-mail</button>
           <button data-act="ct-flag" data-id="${g.id}" class="${g.enviado?'on':''}" data-s="sim">${g.enviado?'Enviado':'Marcar enviado'}</button>
         </div>
       </div>`;}).join('') || `<div class="msg" style="text-align:center;color:var(--ink-3)">Nenhuma família com esses filtros.</div>`}</div>
@@ -2129,7 +2199,7 @@ function render(){
 function pickGuest(id){
   const g = DB.guests.find(x=>x.id===id);
   if(!g) return;
-  form = { id:g.id, nome:g.nome, telefone:g.telefone||'', status:g.status==='pendente'?'':g.status,
+  form = { id:g.id, nome:g.nome, telefone:soTelefone(g.telefone), status:g.status==='pendente'?'':g.status,
            pessoas:+g.pessoas||1, criancas:+g.criancas||0, restricao:g.restricao||'', mensagem:g.mensagem||'' };
   suggestOpen = false; suggestIdx = -1; formError='';
   render();
@@ -2169,7 +2239,7 @@ async function submitRSVP(){
   // quem já está na lista mantém o nome da planilha: o convidado pode ter
   // aberto a página antes de uma correção feita pelos noivos
   if(!jaEraDaLista) g.nome = form.nome.trim();
-  g.telefone = form.telefone;
+  g.telefone = juntarContato(soTelefone(form.telefone), soEmail(g.telefone));
   g.status = form.status;
   g.pessoas = form.status==='nao' ? 0 : form.pessoas;
   g.criancas = form.status==='nao' ? 0 : form.criancas;
@@ -2207,8 +2277,8 @@ async function patch(id, field, value){
 }
 
 function exportCSV(){
-  const head = ['Representante','Dependentes','Tratamento no convite','Link do convite','Telefone','Convite enviado','Lado','Grupo','Status','Pessoas','Crianças','Restrição','Mensagem','Observação','Convite entregue','Atualizado em'];
-  const rows = DB.guests.map(g=>[g.nome,g.dependentes||'',tituloDe(g),linkConvite(g),g.telefone,g.enviado?'Sim':'Não',g.lado,g.grupo,STATUS_LABEL[g.status],g.pessoas,g.criancas,g.restricao,g.mensagem,g.obs,g.convite?'Sim':'Não',g.em?new Date(g.em).toLocaleString('pt-BR'):'']);
+  const head = ['Representante','Dependentes','Tratamento no convite','Link do convite','Telefone','E-mail','Convite enviado','Lado','Grupo','Status','Pessoas','Crianças','Restrição','Mensagem','Observação','Convite entregue','Atualizado em'];
+  const rows = DB.guests.map(g=>[g.nome,g.dependentes||'',tituloDe(g),linkConvite(g),soTelefone(g.telefone),soEmail(g.telefone),g.enviado?'Sim':'Não',g.lado,g.grupo,STATUS_LABEL[g.status],g.pessoas,g.criancas,g.restricao,g.mensagem,g.obs,g.convite?'Sim':'Não',g.em?new Date(g.em).toLocaleString('pt-BR'):'']);
   const csv = [head,...rows].map(r=>r.map(c=>`"${String(c??'').replace(/"/g,'""')}"`).join(';')).join('\r\n');
   try{
     const blob = new Blob(['\uFEFF'+csv], {type:'text/csv;charset=utf-8'});
@@ -2367,11 +2437,11 @@ document.addEventListener('click', async e=>{
   if(t.id==='fila-repescar'){ pulados = new Set(); render(); return; }
   if(t.dataset.act==='fila-pular'){ pulados.add(t.dataset.id); render(); return; }
   if(t.dataset.act==='fila-enviar'){
-    await enviarWhats(DB.guests.find(x=>x.id===t.dataset.id));
+    await enviarConvite(DB.guests.find(x=>x.id===t.dataset.id), t.dataset.canal);
     return;
   }
   if(t.dataset.act==='cv-enviar'){
-    await enviarWhats(DB.guests.find(x=>x.id===t.dataset.id)); return;
+    await enviarConvite(DB.guests.find(x=>x.id===t.dataset.id), t.dataset.canal); return;
   }
   if(t.dataset.act==='cv-ver'){ conviteId = t.dataset.id; conviteAberto = false; view='convite'; render(); window.scrollTo({top:0}); return; }
   if(t.dataset.act==='cv-link'){
@@ -2473,7 +2543,7 @@ document.addEventListener('input', e=>{
   if(el.id==='f-tel'){ const p = el.selectionStart; el.value = fmtPhone(el.value); form.telefone = el.value; return; }
   if(el.dataset && el.dataset.f==='telefone'){
     const g = DB.guests.find(x=>x.id===el.dataset.id);
-    el.value = formatarComPais(el.value, paisDe(g ? g.telefone : ''));
+    el.value = formatarComPais(el.value, paisDe(g ? soTelefone(g.telefone) : ''));
     return;
   }
   if(el.id==='qr-url'){ qrUrl = el.value; drawQR(); return; }
@@ -2495,7 +2565,7 @@ document.addEventListener('change', async e=>{
     const g = DB.guests.find(x=>x.id===el.dataset.pais);
     if(!g) return;
     const pais = PAISES.find(p=>p.c===el.value) || { c:el.value, n:'Outro país' };
-    g.telefone = montarTel(pais, nacionalDe(g.telefone));
+    g.telefone = juntarContato(montarTel(pais, nacionalDe(soTelefone(g.telefone))), soEmail(g.telefone));
     const ok = await persist({action:'patch', id:g.id, field:'telefone', value:g.telefone});
     render();
     if(!ok) toast('Não foi possível salvar essa alteração.');
@@ -2518,6 +2588,19 @@ document.addEventListener('change', async e=>{
       }catch(err){ toast('Arquivo inválido: ' + err.message); }
     };
     leitor.readAsText(f);
+    return;
+  }
+  // telefone e e-mail dividem a coluna: gravar um nunca pode apagar o outro
+  if(el.dataset && (el.dataset.f==='telefone' || el.dataset.f==='email') && el.dataset.id){
+    const g = DB.guests.find(x=>x.id===el.dataset.id);
+    if(!g) return;
+    const valor = el.dataset.f==='email'
+      ? juntarContato(soTelefone(g.telefone), el.value.trim())
+      : juntarContato(el.value.trim(), soEmail(g.telefone));
+    g.telefone = valor;
+    const ok = await persist({action:'patch', id:g.id, field:'telefone', value:valor});
+    render();
+    if(!ok) toast('Não foi possível salvar essa alteração.');
     return;
   }
   if(el.dataset && el.dataset.f && el.dataset.id){
